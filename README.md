@@ -41,6 +41,10 @@ If you intend to use user-specific methods (e.g. relationships), then you must a
 
     Instagram.set('redirect_uri', 'YOUR-REDIRECT-URI');
 
+If you intend to use endpoints that require the _X-Insta-Forwarded-For_ header ([Enforce Signed Header](https://instagram.com/developer/restrict-api-requests/#)), then you must set a single or comma-separated IP-addresses of your service(s)
+
+    Instagram.set('service_ip', 'IP1,IP2,...,IPn');
+
 Lastly, if you find that the default max sockets of 5 is too few for the http(s) client, you can increase it as needed with the set method. The new max sockets value must be a positive integer greater than zero.
 
     Instagram.set('maxSockets', 10);
